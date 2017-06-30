@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weico.Login" NavigationPage.HasNavigationBar="False" BackgroundImage="splashscreen.png">
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30" Spacing="10" Opacity="0.9">
+        <Entry BackgroundColor="Transparent" FontSize="Large" x:Name="UserName" Placeholder="用户名/手机号/邮箱" PlaceholderColor="White" HorizontalOptions="Fill" />
+        <Entry BackgroundColor="Transparent" FontSize="Large" x:Name="Pwd" IsPassword="True" Placeholder="密码" PlaceholderColor="White" HorizontalOptions="Fill"  />
+        <Button x:Name="btnLogin" BackgroundColor="#1976d2" Text="登 录" Clicked="btnLogin_Clicked" TextColor="White" FontSize="Large" HorizontalOptions="Fill" />
+        <StackLayout Orientation="Horizontal" VerticalOptions="Fill">
+            <Label x:Name="btnForgetPwd" Text="忘记密码?" FontSize="Medium" BackgroundColor="Transparent" TextColor="#1976d2" HorizontalOptions="StartAndExpand" />
+            <Label x:Name="btnRegister" Text="新用户注册" FontSize="Medium" BackgroundColor="Transparent" TextColor="#1976d2" HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weico.Page1" NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <ListView x:Name="ProList" HasUnevenRows="True" CachingStrategy="RecycleElement"   VerticalOptions="Fill" HorizontalOptions="Fill">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PhotoSrc}" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="CenterAndExpand" Spacing="20" Margin="20,0,0,0" >
+                                <Label Text="{Binding ProName}" FontAttributes="Bold" />
+                                <Label Text="{Binding ProDescribe}" />
+                                <Label TextColor="Red" FontSize="Small" Text="{Binding Price}" VerticalOptions="End" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ScrollView>
+</ContentPage>
